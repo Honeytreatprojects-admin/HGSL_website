@@ -79,8 +79,11 @@
 <section class="sec"><div class="wrap"><div class="split">
       <div class="rv"><p class="plate">Send an enquiry</p><h2 class="h2 mt-s">Pick the division and we will route it.</h2>
       <p class="lead mt-m">Enquiries go to the division lead who owns the work, not a general inbox.</p>
-      <form class="form mt-l" data-demo-form>
+      <form class="form mt-l" data-form>
+        <input type="hidden" name="_subject" value="New enquiry — honeytreatglobal.com">
+        <input class="sr" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form__ok">Thank you. Your enquiry has been logged and the division lead will respond directly.</div>
+        <div class="form__err"></div>
         <div class="f2">
           <div class="fld"><label for="c-name">Full name</label><input id="c-name" name="name" type="text" required></div>
           <div class="fld"><label for="c-org">Organisation</label><input id="c-org" name="org" type="text"></div>
@@ -179,5 +182,6 @@
 </div>
 <script src="assets/js/hgsl.js"></script>
 <script src="assets/js/assistant.js"></script>
+<script src="assets/js/forms.js"></script>
 </body>
 </html>

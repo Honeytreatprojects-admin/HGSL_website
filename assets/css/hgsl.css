@@ -756,3 +756,51 @@ ul{margin:0;padding:0;list-style:none}
   body{background:#fff}
   .ink,.foot,.cta,.hero,.shero{background:#fff!important;color:#000!important}
 }
+
+/* --- 23. Apply modal (careers) ----------------------------------------- */
+.modal{
+  position:fixed;inset:0;z-index:160;display:grid;place-items:center;
+  padding:clamp(1rem,3vw,2rem);opacity:0;visibility:hidden;
+  transition:opacity .3s var(--ease),visibility .3s
+}
+.modal.open{opacity:1;visibility:visible}
+.modal__scrim{position:absolute;inset:0;background:rgba(20,16,28,.62)}
+.modal__box{
+  position:relative;width:min(560px,100%);max-height:calc(100svh - 2rem);overflow-y:auto;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:0 40px 80px -30px rgba(20,16,28,.55);
+  transform:translateY(14px) scale(.985);transition:transform .35s var(--ease)
+}
+.modal.open .modal__box{transform:none}
+.modal__h{display:flex;align-items:flex-start;gap:1rem;padding:1.6rem 1.6rem 0}
+.modal__h h3{color:var(--ink)}
+.modal__x{margin-left:auto;flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:var(--r);color:var(--slate);transition:background .25s,color .25s}
+.modal__x:hover{background:var(--paper-2);color:var(--ink)}
+.modal__f{padding:1.5rem 1.6rem 1.75rem}
+.form__err{display:none;padding:.9rem 1rem;border-radius:var(--r);background:rgba(240,164,0,.1);border:1px solid rgba(240,164,0,.5);font-size:.9375rem;color:var(--ink)}
+.form__err.on{display:block}
+.btn[disabled]{opacity:.6;pointer-events:none}
+@media(max-width:620px){
+  .modal{place-items:end center;padding:0}
+  .modal__box{width:100%;max-height:92svh;border-radius:var(--r-lg) var(--r-lg) 0 0}
+}
+
+/* --- 24. Mobile fixes --------------------------------------------------- */
+/* .nav.solid uses backdrop-filter, which makes the nav a containing block
+   for fixed-position children. The drawer must therefore be sized off the
+   nav's own box, not the viewport. */
+.drawer{
+  top:var(--nav-h);right:0;bottom:auto;left:0;
+  height:calc(100vh - var(--nav-h));
+  height:calc(100svh - var(--nav-h));
+  z-index:135;overscroll-behavior:contain;-webkit-overflow-scrolling:touch
+}
+@media(max-width:760px){
+  :root{--nav-h:68px}
+  .foot__addr,.foot__l a,.msg{overflow-wrap:anywhere}
+}
+@media(max-width:620px){
+  .split__art{min-height:220px}
+  .foot__b{flex-direction:column;align-items:flex-start;gap:1.25rem}
+  .chat-open{padding:.75rem 1rem}
+}
