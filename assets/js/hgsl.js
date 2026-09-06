@@ -72,8 +72,11 @@
   }
 
   /* ---- Animated counters ---------------------------------------------- */
+  /* Only runs on a data-count that parses to a real number. A data-count
+     holding a label string is skipped, so it can never render as NaN. */
   function countUp(el) {
     var target = parseFloat(el.dataset.count);
+    if (isNaN(target)) return;
     var dec = (el.dataset.dec | 0);
     if (calm) { el.textContent = target.toFixed(dec); return; }
     var dur = 1500, t0 = null;
@@ -86,7 +89,9 @@
     }
     requestAnimationFrame(step);
   }
-  var nums = $$('[data-count]');
+  var nums = $$('[data-count]').filter(function (el) {
+    return !isNaN(parseFloat(el.dataset.count));
+  });
   if (nums.length) {
     if (!('IntersectionObserver' in window)) { nums.forEach(countUp); }
     else {

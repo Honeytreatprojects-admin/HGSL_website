@@ -804,3 +804,37 @@ ul{margin:0;padding:0;list-style:none}
   .foot__b{flex-direction:column;align-items:flex-start;gap:1.25rem}
   .chat-open{padding:.75rem 1rem}
 }
+
+/* --- 25. Footer socials: four icons, clear of the chat launcher ---------
+   The .chat-open pill is fixed to the viewport bottom-right, so at full
+   scroll it used to sit on top of the .soc row. Reserving footer bottom
+   space lifts the row clear of it, and .soc now wraps rather than
+   overflowing once a fourth icon is added.                             */
+.foot{padding-bottom:calc(2rem + 78px)}
+.foot__b{gap:1rem 2rem}
+.soc{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.5rem;margin-left:auto}
+.soc a{flex:none}
+@media(max-width:620px){
+  .foot{padding-bottom:calc(2rem + 96px)}
+  .soc{justify-content:flex-start;margin-left:0}
+}
+
+/* --- 26. Video embed ----------------------------------------------------
+   Responsive 16:9 frame for an embedded player. The iframe is absolutely
+   positioned so it fills the ratio box at every width — no fixed height,
+   nothing to adjust per breakpoint.                                    */
+.vframe{
+  position:relative;width:100%;max-width:960px;
+  margin:2.75rem auto 0;aspect-ratio:16/9;
+  border-radius:var(--r-lg);overflow:hidden;
+  background:var(--ink-2);border:1px solid var(--line)
+}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.ink .vframe{border-color:var(--line-dk)}
+/* Fallback for engines without aspect-ratio support */
+@supports not (aspect-ratio:16/9){
+  .vframe{height:0;padding-bottom:56.25%}
+}
+@media(max-width:620px){
+  .vframe{margin-top:2rem;border-radius:var(--r)}
+}

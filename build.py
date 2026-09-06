@@ -58,7 +58,7 @@ DIVISIONS = [
         stats=[("Fleet classes in service", "12", ""), ("Maintenance response, hours", "24", ""), ("Utilisation rate", "87", "%")],
     ),
     dict(
-        code="RED", slug="real-estate", name="Real Estate Development",
+        code="REM", slug="real-estate", name="Real Estate Management",
         short="Residential, commercial and industrial assets developed for long-term value, not fast turnover.",
         headline="Buildings that hold<em>their value.</em>",
         lead="Site acquisition through design, delivery and asset management — residential, commercial and industrial property developed against investment fundamentals.",
@@ -97,7 +97,7 @@ DIVISIONS = [
         stats=[("Asset classes developed", "4", ""), ("Projects in delivery", "6", ""), ("Sq. metres in pipeline", "40", "k+")],
     ),
     dict(
-        code="CNG", slug="cng", name="CNG Distribution",
+        code="CNG", slug="cng", name="CNG Retailing",
         short="Compressed natural gas infrastructure, supply and vehicle conversion for industry and transport.",
         headline="Cleaner fuel,<em>lower running cost.</em>",
         lead="Refuelling infrastructure, industrial gas supply and vehicle conversion programmes that cut fuel spend while reducing emissions against diesel and petrol.",
@@ -581,7 +581,7 @@ def page_home():
         f'<div class="post__m"><span>{cat}</span><time datetime="2026-07">July 2026</time></div>'
         f'<h3>{t}</h3><p>{d}</p></a>' for t, cat, d, s in INSIGHTS)
 
-    ticker_items = ["Equipment leasing", "Real estate development", "CNG distribution",
+    ticker_items = ["Equipment leasing", "Real estate Management", "CNG Retailing",
                     "Mining operations", "Software development", "Lagos, Nigeria",
                     "QwikCare", "SurDrive", "Enterprise platforms", "Energy transition",
                     "Aggregate supply", "Industrial infrastructure"]
@@ -599,12 +599,12 @@ def page_home():
 {{"@context":"https://schema.org","@type":"Organization","name":"Honeytreat Global Services Limited",
 "alternateName":"HGSL","url":"{SITE}","email":"{MAIL}","telephone":"{TEL}",
 "address":{{"@type":"PostalAddress","streetAddress":"9A Bankole Street, Magodo Phase 1","addressLocality":"Lagos","addressCountry":"NG"}},
-"description":"Diversified Nigerian industrial and technology group operating in equipment leasing, real estate development, CNG distribution, mining and software development.",
-"knowsAbout":["Equipment leasing","Real estate development","Compressed natural gas","Mining","Software development"]}}
+"description":"Diversified Nigerian industrial and technology group operating in equipment leasing, real estate management, CNG retailing, mining and software development.",
+"knowsAbout":["Equipment leasing","Real estate management","Compressed natural gas","Mining","Software development"]}}
 </script>"""
 
     return (head("Honeytreat Global Services Limited — Industrial and technology group, Nigeria",
-                 "HGSL is a diversified Nigerian industrial and technology group operating across equipment leasing, real estate development, CNG distribution, mining and software development.",
+                 "HGSL is a diversified Nigerian industrial and technology group operating across equipment leasing, real estate management, CNG retailing, mining and software development.",
                  "index.html", ld) + nav("index.html") + f"""
 <main id="main">
 <section class="hero" aria-label="Introduction">
@@ -723,7 +723,7 @@ def page_divisions():
   </div>
 </section>"""
     return (head("Business divisions — Honeytreat Global Services Limited",
-                 "The five operating divisions of HGSL: equipment leasing, real estate development, CNG distribution, mining operations, and software development.",
+                 "The five operating divisions of HGSL: equipment leasing, real estate management, CNG retailing, mining operations, and software development.",
                  "divisions.html") + nav() + f"""<main id="main">
 {shero("HGSL", [("Home", "index.html"), ("Divisions", None)], "Group structure",
        "Five divisions. One operating standard.",
