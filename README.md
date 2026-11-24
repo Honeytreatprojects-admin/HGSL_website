@@ -49,7 +49,7 @@ photography. To use a real photo, set `--img` on the element:
 
 ```html
 <div class="field" style="--fa:#F0A400;--fb:#7A4A00">
-  <div class="field__img" style="--img:url('assets/img/eql-01.jpg')"></div>
+  <div class="field__img" style="--img:url('assets/img/eql-01.webp')"></div>
   <div class="field__scrim"></div>
 </div>
 ```

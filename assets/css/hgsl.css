@@ -227,14 +227,14 @@ ul{margin:0;padding:0;list-style:none}
 .brand{
   display:block;flex:none;margin-right:auto;
   width:162px;height:46px;
-  background:url('../img/logo-hgsl-white.png') left center/contain no-repeat;
+  background:url('../img/logo-hgsl-white.webp') left center/contain no-repeat;
 }
-.nav.solid .brand{background-image:url('../img/logo-hgsl-dark.png')}
-.foot .brand{width:184px;height:52px;margin:0 0 1.5rem;background-image:url('../img/logo-hgsl-white.png')}
+.nav.solid .brand{background-image:url('../img/logo-hgsl-dark.webp')}
+.foot .brand{width:184px;height:52px;margin:0 0 1.5rem;background-image:url('../img/logo-hgsl-white.webp')}
 @media(max-width:760px){
-  .brand{width:40px;height:40px;background-image:url('../img/logo-hgsl-mark-white.png')}
-  .nav.solid .brand{background-image:url('../img/logo-hgsl-mark-dark.png')}
-  .foot .brand{width:158px;height:45px;background-image:url('../img/logo-hgsl-white.png')}
+  .brand{width:40px;height:40px;background-image:url('../img/logo-hgsl-mark-white.webp')}
+  .nav.solid .brand{background-image:url('../img/logo-hgsl-mark-dark.webp')}
+  .foot .brand{width:158px;height:45px;background-image:url('../img/logo-hgsl-white.webp')}
 }
 
 .nav__links{display:flex;align-items:center;gap:.25rem}
@@ -581,10 +581,10 @@ ul{margin:0;padding:0;list-style:none}
   filter:saturate(.95);opacity:.9;transition:opacity .3s,transform .4s var(--ease)
 }
 .plock:hover b{opacity:1;transform:translateY(-2px)}
-.plock:nth-child(1) b{background-image:url('../img/logo-htg-group.png')}
-.plock:nth-child(2) b{background-image:url('../img/logo-mantrac.png')}
-.plock:nth-child(3) b{background-image:url('../img/logo-hta.png')}
-.plock:nth-child(4) b{background-image:url('../img/logo-htl.png')}
+.plock:nth-child(1) b{background-image:url('../img/logo-htg-group.webp')}
+.plock:nth-child(2) b{background-image:url('../img/logo-mantrac.webp')}
+.plock:nth-child(3) b{background-image:url('../img/logo-hta.webp')}
+.plock:nth-child(4) b{background-image:url('../img/logo-htl.webp')}
 .plock span{font:500 var(--t-plate)/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--slate-2)}
 
 /* --- 13. Insights ------------------------------------------------------ */

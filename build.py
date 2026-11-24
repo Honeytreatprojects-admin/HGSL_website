@@ -1236,9 +1236,9 @@ def main():
 
     with open(os.path.join(OUT, "assets", "img", "README.txt"), "w") as f:
         f.write("Drop real photography here, then set --img on any .field or .field__img element.\n"
-                "Suggested names: hero-eql.jpg, hero-red.jpg, hero-cng.jpg, hero-min.jpg, hero-sdi.jpg,\n"
-                "eql-01..06.jpg, red-01..06.jpg, cng-01..06.jpg, min-01..06.jpg, sdi-01..06.jpg,\n"
-                "qwikcare-app.png, surdrive-app.png, leader-01..04.jpg\n")
+                "Suggested names: hero-eql.webp, hero-red.webp, hero-cng.webp, hero-min.webp, hero-sdi.webp,\n"
+                "eql-01..06.webp, red-01..06.webp, cng-01..06.webp, min-01..06.webp, sdi-01..06.webp,\n"
+                "qwikcare-app.webp, surdrive-app.webp, leader-01..04.webp\n")
     print(f"Built {len(pages)} pages into {OUT}")
     for p in sorted(pages):
         print("  ", p)
