@@ -441,7 +441,7 @@ def footer():
     </div>
     <div class="foot__b">
       <p>&copy; <span data-year>2026</span> Honeytreat Global Services Limited. All rights reserved.</p>
-      <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></nav>
+      <nav aria-label="Legal"><a href="assets/docs/HGSL_Data_Privacy_Policy.pdf">Privacy policy</a><a href="#">Accessibility</a></nav>
       <div class="soc">
         <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9.5 14V8.6h1.9l.3-2.2H9.5V5c0-.6.2-1.1 1.1-1.1h1.2V1.9c-.2 0-1-.1-1.8-.1-1.9 0-3.1 1.1-3.1 3.2v1.4H4.9v2.2H7V14h2.5z"/></svg></a>
         <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="2.5" width="11" height="11" rx="3.2"/><circle cx="8" cy="8" r="2.6"/><circle cx="11.4" cy="4.6" r=".7" fill="currentColor" stroke="none"/></svg></a>
